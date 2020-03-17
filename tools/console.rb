@@ -5,15 +5,7 @@ require_relative '../config/environment.rb'
 def reload
   load 'config/environment.rb'
 end
-
-# Insert code here to run before hitting the binding.pry
-# This is a convenient place to define variables and/or set up new object instances,
-# so they will be available to test and play around with in your console
-
-
-
-
-
-# ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
+#I am going to be real, idk if the code works, I couldnt get pry to work, and I was stressed this whole time
+#But i feel like i did my best and i will probably do better on the next one.
 binding.pry
 0
