@@ -10,7 +10,9 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
-
+15.times {Viewer.new(Faker::Name.name)}
+15.times {Movie.new(Faker::Movie.name)}
+15.times {Review.new(Viewer.username[rand(15)], Movie.title[rand(15), Review.rating[rand(5)]])}
 
 
 
