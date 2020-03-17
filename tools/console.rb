@@ -6,12 +6,12 @@ def reload
   load 'config/environment.rb'
 end
 
-# Insert code here to run before hitting the binding.pry
-# This is a convenient place to define variables and/or set up new object instances,
-# so they will be available to test and play around with in your console
+10.times {Movie.new(Faker::Superhero.name)}
+10.times {Viewer.new(Faker::Name.name)}
 
-
-
+5.times {|i| Review.new(Viewer.all[i], Movie.all[i], rand(0..10))}
+5.times {|i| Review.new(Viewer.all[i], Movie.all[i + 2], rand(0..10))}
+5.times {|i| Review.new(Viewer.all[i], Movie.all[i + 4], rand(0..10))}
 
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
